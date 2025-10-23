@@ -42,7 +42,7 @@ public class SuperHero {
         }
     }
 
-    public void getBiography(String name) {
+    private void getBiography(String name) {
         try {
             // Lowercase the name, then replace spaces with %20 for URL encoding
             String encodedName = name.toLowerCase().replace(" ", "%20");
@@ -130,7 +130,7 @@ public class SuperHero {
     }
 
 
-    private PowerStats getPowerStatsObject(String name) {
+    public PowerStats getPowerStatsObject(String name) {
         try {
             String encodedName = name.toLowerCase().replace(" ", "%20");
             String url = "https://superheroapi.com/api/8ed705391e20f7fbac9335e38e7877d1/search/" + encodedName;
